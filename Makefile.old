@@ -1,0 +1,26 @@
+RM = del
+CC = g++
+ARGS = -Wall
+
+all: rpg ;
+
+rpg: Main.o Game.o File.o Player.o Item.o
+	$(CC) $(ARGS) -o RPG.exe Main.o Game.o File.o Player.o Item.o
+
+Main.o: Main.cpp
+	$(CC) $(ARGS) -c Main.cpp -o Main.o
+
+Game.o: Game.cpp Game.h
+	$(CC) $(ARGS) -c Game.cpp -o Game.o
+
+File.o: File.cpp File.h
+	$(CC) $(ARGS) -c file.cpp -o File.o
+
+Player.o: Player.cpp Player.h
+	$(CC) $(ARGS) -c Player.cpp -o Player.o
+
+Item.o: Item.cpp Item.h
+	$(CC) $(ARGS) -c Item.cpp -o Item.o
+
+clean:
+	$(RM) -f *.o
