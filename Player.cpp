@@ -17,6 +17,12 @@ Player::Player() {
 	this->xp = 0;
 	this->xpToLevel = 100;
 
+	/*this->stats = new int[sizeof(PlayerStat)];
+
+	for (unsigned int i = 0; i < sizeof(PlayerStat); i++) {
+		this->stats[i] = 0;
+	}*/
+
 	this->stat_agi = 10;
 	this->stat_cha = 10;
 	this->stat_int = 10;
